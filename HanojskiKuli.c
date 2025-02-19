@@ -3,7 +3,7 @@
 
 void printMove(int disk, char from, char to) {
     printf("Moving disk %d from %c to %c\n", disk, from, to);
-    for (volatile long i = 0; i < 100000000; i++);
+    for (int i = 0; i < 100000000; i++);
 }
 
 void hanoi(int n, char from, char aux, char to) {
