@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <conio.h>
+#include <stdlib.h>
 
-void clearscreen() {
+void clearscreen()
+{
     system("cls");
 }
 
 void main() {
     int selectedOption = 0;
-    char button;
+    unsigned char button;
     while (1) {
         clearscreen();
 
@@ -35,7 +37,7 @@ void main() {
         else
             printf("  Exit\n");
 
-        button = getche();
+        button = getch();
 
         if (button == 72) {
             selectedOption = (selectedOption + 4) % 5;
