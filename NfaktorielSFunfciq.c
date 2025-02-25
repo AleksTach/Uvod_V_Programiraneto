@@ -11,6 +11,7 @@ void main()
      scanf("%d",&n);
     }while(n<0);
     printf("\n%d!=%d",n,fact(n));
+    printf("\n%d!=%d",n,fact1(n));
 }
 
 
