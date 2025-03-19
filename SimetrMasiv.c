@@ -1,9 +1,8 @@
 #include <stdio.h>
-#define MAX_BR 100
+#define MAX_BR 10
 
 void main() {
-    int n, i, symmetric;
-    int elem[MAX_BR];
+    int n, i, symmetric, elem[MAX_BR];
 
     do {
         printf("n= ");

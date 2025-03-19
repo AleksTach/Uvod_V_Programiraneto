@@ -12,8 +12,10 @@ void main()
     printf("Write the grades for %d students:\n", n);
     for(int i = 0; i < n; i++)
     {
-        printf("Grade for student [%d] is ", i);
-        scanf("%f", &stud[i]);
+        do{
+        printf("Grade for student %d is ", i+1);
+        scanf("%f", &stud[i]);}
+        while(stud[i] < 2 || stud[i] > 6);
     }
     for(int i = 0; i < n; i++)
     {
@@ -26,7 +28,7 @@ void main()
     for(int i = 0; i < n; i++)
     {
         if(stud[i] == 6){
-            printf("Student [%d]\n", i);
+            printf("Student %d\n", i+1);
             f++;
         }
     }
@@ -37,7 +39,7 @@ void main()
     for(int i = 0; i < n; i++)
     {
         if (stud[i] == 2){
-            printf("Student [%d]\n", i);
+            printf("Student %d\n", i+1);
             k++;
         }
     }
