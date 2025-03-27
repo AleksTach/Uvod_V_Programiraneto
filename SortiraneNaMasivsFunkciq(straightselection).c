@@ -4,7 +4,7 @@
 void swap(int *pa, int *pb);
 int main()
 {
-    int n, sorted, arr[MAX_BR];
+    int n, arr[MAX_BR];
     do {
         printf("How many numbers do you want to enter? ", MAX_BR);
         scanf("%d", &n);
@@ -14,14 +14,15 @@ int main()
         scanf("%d", &arr[i]);
     };
     for(int i = 0; i < n - 1; i++) {
-        sorted = 1;
-        for(int j = 0; j < n - i - 1; j++) {
-            if(arr[j] > arr[j + 1]) {
-                swap(&arr[j], &arr[j + 1]);
-                sorted = 0;
+        int min = i;
+        for(int j = i + 1; j < n; j++) {
+            if(arr[j] < arr[min]) {
+                min = j;
             }
         }
-        if (sorted) break;
+        if(min != i) {
+            swap(&arr[i], &arr[min]);
+        }
     }
     printf("Sorted array:\n");
     for(int i = 0; i < n; i++) {
