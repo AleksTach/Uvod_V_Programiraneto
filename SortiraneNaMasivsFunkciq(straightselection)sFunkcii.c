@@ -18,7 +18,7 @@ void enterNumbers(int *arr, int *n)
 {
     do {
         printf("How many numbers do you want to enter? ", MAX_BR);
-        scanf("%d", n);
+        scanf("%d", &n);
     } while(*n < 1 || *n > MAX_BR);
     printf("Enter %d numbers:\n", *n);
     for(int i = 0; i < *n; i++) {
